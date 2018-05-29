@@ -1,0 +1,77 @@
+/*
+	Bryan Moore Web Development
+	Custom Template Number 1
+	template1.html
+*/
+
+body {
+	background-color: #EAE7DC;
+}
+
+.headline {
+	padding: 50px;
+}
+
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 2px;
+    width: 80%;
+    border-color: #31708E;
+} 
+
+.banner {
+	font-size: 30pt;
+	text-align: center;
+	font-weight: bold;
+	font-family: avenir;
+	color: #3F3F3F;
+}
+
+.banner2 {
+	font-size: 12pt;
+	text-align: center;
+	font-weight: bold;
+	font-family: avenir;
+	color: #31708E;
+}
+
+.banner3 {
+	font-size: 12pt;
+	text-align: center;
+	font-weight: bold;
+	font-family: avenir;
+	color: #3F3F3F;
+	padding-top: 10px;
+}
+
+.banner3 a {
+	padding: 20px;
+	color: #3F3F3F;
+}
+
+.banner3 a:hover {
+    color: #A6A163;
+}
+
+.banner4 {
+	font-size: 12pt;
+	text-align: center;
+	font-weight: bold;
+	font-family: avenir;
+	color: #3F3F3F;
+	padding: 10px;
+}
+
+.banner4 a {
+	padding: 10px;
+}
+
+.banner4 img {
+	height: 20px;
+	width: 20px;
+}
+
