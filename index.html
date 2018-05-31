@@ -1,9 +1,6 @@
 <!--
-
 Bryan Moore Web Developement
-
 Personal Website for Piper Crabtree
-
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -50,7 +47,7 @@ Personal Website for Piper Crabtree
       <div class="row">
       <div class="col-xs-6">
         <div class="thumbnail">
-          <img src="piperArt/Cactus.jpg" alt="...">
+          <img src="piperArt/Cactus.jpg" alt="..." onclick="openModal();currentSlide(1)">
           <!--
           <div class="caption">
             
@@ -64,7 +61,7 @@ Personal Website for Piper Crabtree
       </div>
       <div class="col-xs-6">
         <div class="thumbnail">
-          <img src="piperArt/Connection.jpg" alt="...">
+          <img src="piperArt/Connection.jpg" alt="..." onclick="openModal();currentSlide(2)">
           <!--
           <div class="caption">
             <h3>Thumbnail Label</h3>
@@ -85,7 +82,7 @@ Personal Website for Piper Crabtree
       <div class="row">
       <div class="col-xs-6">
         <div class="thumbnail">
-          <img src="piperArt/DesertDays.jpg" alt="...">
+          <img src="piperArt/DesertDays.jpg" alt="..." onclick="openModal();currentSlide(3)">
           <!--
           <div class="caption">
             
@@ -99,7 +96,7 @@ Personal Website for Piper Crabtree
       </div>
       <div class="col-xs-6">
         <div class="thumbnail">
-          <img src="piperArt/familiar.jpg" alt="...">
+          <img src="piperArt/familiar.jpg" alt="..." onclick="openModal();currentSlide(4)">
           <!--
           <div class="caption">
             <h3>Thumbnail Label</h3>
@@ -120,7 +117,7 @@ Personal Website for Piper Crabtree
       <div class="row">
       <div class="col-xs-6">
         <div class="thumbnail">
-          <img src="piperArt/Her.jpg" alt="...">
+          <img src="piperArt/Her.jpg" alt="..." onclick="openModal();currentSlide(5)">
           <!--
           <div class="caption">
             
@@ -134,7 +131,7 @@ Personal Website for Piper Crabtree
       </div>
       <div class="col-xs-6">
         <div class="thumbnail">
-          <img src="piperArt/PaintPour.jpg" alt="...">
+          <img src="piperArt/PaintPour.jpg" alt="..." onclick="openModal();currentSlide(6)">
           <!--
           <div class="caption">
             <h3>Thumbnail Label</h3>
@@ -155,7 +152,7 @@ Personal Website for Piper Crabtree
       <div class="row">
       <div class="col-xs-6">
         <div class="thumbnail">
-          <img src="piperArt/Space.jpg" alt="...">
+          <img src="piperArt/Space.jpg" alt="..." onclick="openModal();currentSlide(7)">
           <!--
           <div class="caption">
             
@@ -169,7 +166,7 @@ Personal Website for Piper Crabtree
       </div>
       <div class="col-xs-6">
         <div class="thumbnail">
-          <img src="piperArt/Temperature.jpg" alt="...">
+          <img src="piperArt/Temperature.jpg" alt="..." onclick="openModal();currentSlide(8)">
           <!--
           <div class="caption">
             <h3>Thumbnail Label</h3>
@@ -193,6 +190,121 @@ Personal Website for Piper Crabtree
 <div class="banner2">
   <p>Custom Websites by Bryan Moore</p>
 </div>
+
+<!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <img src="piperArt/Cactus.jpg" class="image">
+      <div class="middle">
+        <div class="imagetext">Cactus</div>
+      </div>
+    </div>
+
+    <div class="mySlides">
+      <img src="piperArt/Connection.jpg" class="image">
+      <div class="middle">
+        <div class="imagetext">Connection</div>
+      </div>
+    </div>
+
+    <div class="mySlides">
+      <img src="piperArt/DesertDays.jpg" class="image">
+      <div class="middle">
+        <div class="imagetext">Desert Days</div>
+      </div>
+    </div>
+
+    <div class="mySlides">
+      <img src="piperArt/familiar.jpg" class="image">
+      <div class="middle">
+        <div class="imagetext">Familiar</div>
+      </div>
+    </div>
+
+    <div class="mySlides">
+      <img src="piperArt/Her.jpg" class="image">
+      <div class="middle">
+        <div class="imagetext">Her</div>
+      </div>
+    </div>
+
+    <div class="mySlides">
+      <img src="piperArt/PaintPour.jpg" class="image">
+      <div class="middle">
+        <div class="imagetext">Paint Pour</div>
+      </div>
+    </div>
+
+    <div class="mySlides">
+      <img src="piperArt/Space.jpg" class="image">
+      <div class="middle">
+        <div class="imagetext">Space</div>
+      </div>
+    </div>
+
+    <div class="mySlides">
+      <img src="piperArt/Temperature.jpg" class="image">
+      <div class="middle">
+        <div class="imagetext">Temperature</div>
+      </div>
+    </div>
+
+    <!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Caption text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+  </div>
+</div>
+
+<script>
+// Open the Modal
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+// Close the Modal
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
 
 </body>
 </html>
