@@ -81,6 +81,32 @@ hr {
 	width: 20px;
 }
 
+.aboutmeHeadline {
+	font-size: 12pt;
+	font-weight: bold;
+	font-family: avenir;
+	color: #31708E;
+}
+.aboutme {
+	font-size: 12pt;
+	font-weight: bold;
+	font-family: avenir;
+}
+
+.contactHeadline {
+	font-size: 12pt;
+	font-weight: bold;
+	font-family: avenir;
+	text-align: center;
+	color: #31708E;
+}
+.contact {
+	font-size: 12pt;
+	font-weight: bold;
+	font-family: avenir;
+	text-align: center;
+}
+
 
 /* The Modal (background) ******************************************/
 /* Create four equal columns that floats next to eachother */
